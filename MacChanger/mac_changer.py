@@ -1,15 +1,15 @@
 import subprocess
-import optparse
+import argparse
 import re
 
-print("|MAC CHANGER v1.0|\n")
+print("|MAC CHANGER v1.1|\n")
 print("GitHub:@omerfarukbaysal04")
 print("------------------")
 
 def get_user_inputs():
-    parse_object = optparse.OptionParser()
-    parse_object.add_option("-i", "--interface", dest="interface",help="interface to change!")  # -i ->kısa ad ve --interface ->uzun ad
-    parse_object.add_option("-m", "--mac", dest="mac_address", help="new mac address!")
+    parse_object = argparse.ArgumentParser()
+    parse_object.add_argument("-i", "--interface", dest="interface",help="interface to change!",required=True)  # -i ->short name ve --interface -> long name
+    parse_object.add_argument("-m", "--mac", dest="mac_address", help="new mac address!",required=True)  # -m ->short name ve --mac -> long name
 
     return parse_object.parse_args()
 
@@ -28,9 +28,14 @@ def control_new_mac(interface):
     else:
         return None
 
-(user_input,arguments)=get_user_inputs()
-change_mac_address(user_input.interface,user_input.mac_address)
-finalized_mac_address=control_new_mac(str(user_input.interface))
+user_input=get_user_inputs()
+
+change_interface=user_input.interface
+change_mac=user_input.mac_address
+
+change_mac_address(change_interface, change_mac)
+
+finalized_mac_address=control_new_mac(change_interface)
 
 print("Mac changing started!")
 print("------------------")
