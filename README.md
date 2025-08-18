@@ -153,7 +153,7 @@ Do not use these tools on networks, systems, or devices without **explicit writt
 ## 👤 Author
 
 **Ömer Faruk Baysal**
-📧 [omerfarukbaysal04@gmail.com](mailto:omerfarukbaysal04@gmail.com)
+📧 [Mail](mailto:baysalomerfaruk54@gmail.com)
 🌐 [GitHub](https://github.com/omerfarukbaysal04)
 🌐 [LinkedIn](https://linkedin.com/in/baysal)
 
